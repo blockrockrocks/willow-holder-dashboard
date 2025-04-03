@@ -64,4 +64,8 @@ leaderboard_df["Wallet"] = leaderboard_df["PlainWallet"].apply(
 )
 
 st.subheader("🏆 Leaderboard (Top 50)")
-st.write(leaderboard_df.head(50).to_html(escape=False, index=True), unsafe_allow_html=True)
+
+# hide PlainWallet before rendering
+display_df = leaderboard_df.drop(columns=["PlainWallet"])
+
+st.write(display_df.head(50).to_html(escape=False, index=True), unsafe_allow_html=True)
