@@ -56,7 +56,7 @@ if wallet_to_check:
         supply_pct = match["% of Supply"].values[0]
         st.success(f"✅ Wallet found!\n\n🏅 Rank: #{rank}\n💰 Balance: {balance:,.2f} WILLOW\n📊 Share: {supply_pct:.6f}%")
     else:
-        st.warning("Wallet not found among top holders (limit: 200).")
+        st.warning("Wallet not found among top holders (limit: 2000).")
 
 # Format Wallet column after lookup
 leaderboard_df["Wallet"] = leaderboard_df["PlainWallet"].apply(
