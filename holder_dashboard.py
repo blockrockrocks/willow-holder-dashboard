@@ -8,7 +8,7 @@ TOTAL_SUPPLY = 1_000_000_000_000
 DECIMALS = 6
 indexer_client = IndexerClient("", "https://mainnet-idx.algonode.cloud")
 
-def get_all_willow_holders(asset_id, limit=200):
+def get_all_willow_holders(asset_id, limit=2000):
     accounts = []
     next_token = None
     while True:
