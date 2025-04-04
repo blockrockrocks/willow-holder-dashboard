@@ -40,7 +40,7 @@ st.set_page_config(page_title="Willow Holder Dashboard", layout="centered")
 st.title("🌿 Willow Holder Dashboard")
 st.caption("Track $WILLOW holdings and your rank in real time")
 
-accounts = get_all_willow_holders(WILLOW_ASSET_ID, limit=200)
+accounts = get_all_willow_holders(WILLOW_ASSET_ID, limit=2000)
 leaderboard_df = build_leaderboard(accounts)
 
 # Add plain wallet column
